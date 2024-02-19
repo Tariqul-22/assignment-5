@@ -4,7 +4,7 @@ for(const seat of allSeats){
     seat.addEventListener('click',function () {
         console.log('seat conferm');
         count = count - 1;
-        
+
         setInnerText ('available-seat', count);
         
     });
@@ -12,4 +12,8 @@ for(const seat of allSeats){
 
 function setInnerText (id, value){
     document.getElementById(id).innerText = value ;
+}
+
+function setBackground (id){
+    
 }
