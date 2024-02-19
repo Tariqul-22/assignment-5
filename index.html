@@ -18,7 +18,7 @@
 </head>
 
 <body class="raleway">
-    <section>
+    <section id="main-section" class="">
         <section class="container w-10/12 mx-auto mt-14">
             <nav class="flex justify-between items-center">
                 <div class="text-[rgb(3, 7, 18)] font-extrabold text-4xl">
@@ -266,18 +266,17 @@
                         </div>
                         <div class="flex items-center justify-between font-bold py-4">
                             <p>Total Price</p>
-                            <p>BDT <span id="total-price">00</span></p>
+                            <p>BDT <span id="total-price">0.00</span></p>
                         </div>
 
                         <!-- tocken -->
-                        <div class="bg-white rounded-xl flex items-center justify-between">
-                            <input class="pl-5 outline-none" type="text" placeholder="Have any copupon?">
-                            <button
-                                class="bg-[#1DD100] rounded-lg px-[18px] py-[10px] font-semibold text-white m-2">Apply</button>
+                        <div id="coupon-Div" class="bg-white rounded-xl flex items-center justify-between">
+                            <input id="tockenId" class="pl-5 outline-none" type="text" placeholder="Have any copupon?">
+                            <button onclick="copuponBtn()" class="bg-[#1DD100] rounded-lg px-[18px] py-[10px] font-semibold text-white m-2">Apply</button>
                         </div>
                         <div class="flex items-center justify-between font-bold pt-4 pb-2">
                             <p>Grand Total</p>
-                            <p>BDT <span id="grand-total">00</span></p>
+                            <p>BDT <span id="grand-total">0.00</span></p>
                         </div>
                     </div>
 
@@ -299,8 +298,7 @@
                         </div>
 
                         <div class="my-6">
-                            <button
-                                class="bg-[#1DD100] rounded-2xl w-full py-5 font-bold text-2xl text-white">Next</button>
+                            <button onclick="successPage()" class="bg-[#1DD100] rounded-2xl w-full py-5 font-bold text-2xl text-white">Next</button>
                         </div>
                         <div class="flex justify-around">
                             <a href="#" class="underline underline-offset-4 ">Terms and Conditions</a>
@@ -320,7 +318,7 @@
 
 
     <!-- ===============success section====================== -->
-    <section class="bg-[#F2F1F1] py-[180px] flex items-center justify-center roboto">
+    <section id="success-section" class="hidden bg-[#F2F1F1] py-[180px] flex items-center justify-center roboto">
         <div class="border-2 border-dashed">
             <div class="font-bold flex flex-col items-center justify-center bg-white p-14  rounded-2xl ">
                 <img class="border-2 border-dashed " src="./images/success.png" alt="">

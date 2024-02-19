@@ -36,3 +36,39 @@ function setBackground (id){
     }
     k=k+1;
 }
+
+function copuponBtn(){
+    const tocken = document.getElementById('tockenId');
+    const tockenText = tocken.value
+    console.log(tockenText);
+
+    if (tockenText === 'NEW15') {
+        console.log('discount de');
+        let a = document.getElementById('grand-total').innerText
+        let b = parseFloat(a)
+        let c = b - b * 0.15
+        setInnerText ('grand-total', c);
+
+        let couponDiv = document.getElementById('coupon-Div');
+        couponDiv.classList.add("hidden");
+
+    }
+    else if (tockenText === 'Couple 20') {
+        console.log('discount de');
+        let a = document.getElementById('grand-total').innerText
+        let b = parseFloat(a)
+        let c = b - b * 0.2
+        setInnerText ('grand-total', c);
+
+        let couponDiv = document.getElementById('coupon-Div');
+        couponDiv.classList.add("hidden");
+    }
+}
+
+function successPage(){
+    const mainSection = document.getElementById('main-section');
+    mainSection.classList.add("hidden");
+
+    const successSection = document.getElementById('success-section');
+    successSection.classList.remove("hidden");
+}
